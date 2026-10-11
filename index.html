@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Indian Heritage | Authentic Indian Cuisine in Athens</title>
+<meta name="description" content="Indian Heritage, an Indian restaurant at Imittou 95, Athens. Tandoor, curries, biryani and a wide vegetarian menu. Dine in, book a table or order delivery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=GFS+Didot&family=Hind:wght@400;500;600&family=Commissioner:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#120E0C; --black-2:#1A1311; --maroon:#4A1418; --maroon-2:#2B0E10;
+  --gold:#D8A443; --gold-soft:#E9C47A; --cream:#F2E4CB; --muted:#BCA98D; --line:rgba(216,164,67,.28); --leaf:#7DB36F;
+  --display:"Rozha One", "GFS Didot", Georgia, serif;
+  --body:"Hind", "Commissioner", "Segoe UI", system-ui, sans-serif;
+  color-scheme:dark; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth; scroll-padding-top:calc(76px + env(safe-area-inset-top,0px)); background:var(--black)}
+body{margin:0; background:var(--black); color:var(--cream); font-family:var(--body); font-size:18px; line-height:1.65; -webkit-font-smoothing:antialiased}
+img{max-width:100%; display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold-soft); outline-offset:3px}
+h1,h2,h3{font-family:var(--display); font-weight:400; line-height:1.12; margin:0; color:var(--gold)}
+.wrap{max-width:1120px; margin:0 auto; padding:0 22px}
+
+/* header */
+header{position:sticky; top:env(safe-area-inset-top,0px); z-index:20; background:var(--black); border-bottom:3px solid var(--gold)}
+.bar{display:flex; align-items:center; justify-content:space-between; height:66px}
+.brand{display:flex; align-items:center; gap:12px; text-decoration:none}
+.brand svg{width:38px; height:38px; color:var(--gold)}
+.brand span{font-family:var(--display); font-size:1.45rem; color:var(--gold); white-space:nowrap}
+nav{display:flex; align-items:center; flex:1; justify-content:flex-end}
+nav ul{list-style:none; display:flex; gap:26px; margin:0; padding:0}
+nav a{text-decoration:none; font-size:1rem; color:var(--cream)}
+nav a:hover{color:var(--gold)}
+.lang{display:inline-flex; border:1px solid var(--line); border-radius:999px; overflow:hidden}
+.lang button{background:none; border:none; padding:6px 12px; font:inherit; font-size:.85rem; color:var(--cream); cursor:pointer; letter-spacing:.04em}
+.lang button[aria-pressed="true"]{background:var(--gold); color:var(--black)}
+.lang.hlang{margin-left:22px; order:2}
+.navbtn{display:none; background:none; border:none; color:var(--cream); font-size:1.7rem; line-height:1; padding:4px 2px 4px 14px; cursor:pointer; order:3}
+@media (max-width:860px){
+  .navbtn{display:block}
+  .lang.hlang{margin-left:auto}
+  nav ul{display:none; position:absolute; left:0; right:0; top:69px; background:var(--black); flex-direction:column; gap:0; padding:8px 22px 18px; border-bottom:3px solid var(--gold)}
+  nav ul.open{display:flex}
+  nav li a{display:block; padding:13px 0; border-bottom:1px solid rgba(255,255,255,.07)}
+}
+@media (max-width:400px){.brand span{font-size:1.15rem}.brand svg{width:30px;height:30px}}
+
+/* hero */
+.hero{background:radial-gradient(ellipse 90% 80% at 85% 45%, #5A1A1E 0%, var(--maroon-2) 45%, var(--black) 85%); padding:64px 0 72px}
+.hero-inner{max-width:720px}
+.hero svg.lotus{width:140px; height:94px; color:var(--gold); margin:0 0 18px; display:block; overflow:visible}
+.hero h1{font-size:clamp(2.8rem,9vw,5.2rem); line-height:1.05}
+.greet{font-family:var(--display); font-size:clamp(1.25rem,3.6vw,1.7rem); color:var(--cream); margin:14px 0 22px}
+.greet [lang="el"]{font-family:"GFS Didot", Georgia, serif}
+.lede{font-size:clamp(1.05rem,2.6vw,1.25rem); color:#E8D9BE; max-width:34em; margin:0 0 32px}
+.ctas{display:flex; gap:14px; flex-wrap:wrap}
+.btn{display:inline-block; text-decoration:none; padding:14px 30px; border-radius:999px; font-weight:600; font-size:1.05rem; border:2px solid var(--gold); cursor:pointer; font-family:var(--body); line-height:1.3}
+.btn.solid{background:var(--gold); color:var(--black)}
+.btn.solid:hover{background:var(--gold-soft); border-color:var(--gold-soft)}
+.btn.line{color:var(--cream); background:transparent; border-color:var(--cream)}
+.btn.line:hover{border-color:var(--gold); color:var(--gold)}
+.status{margin:28px 0 0; color:var(--muted); font-size:1rem; display:flex; align-items:center; gap:10px}
+.status::before{content:""; width:9px; height:9px; border-radius:50%; background:var(--muted)}
+.status.open::before{background:var(--leaf); box-shadow:0 0 0 4px rgba(125,179,111,.18)}
+
+/* sections */
+section{padding:88px 0}
+.head{max-width:640px; margin-bottom:40px}
+.head h2{font-size:clamp(2.1rem,5.5vw,3rem)}
+.head p{color:var(--muted); margin:12px 0 0}
+
+/* signature dishes */
+.dishes{display:grid; grid-template-columns:repeat(4,1fr); gap:24px}
+@media (max-width:900px){.dishes{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.dishes{grid-template-columns:1fr}}
+.dish .ph{aspect-ratio:4/5; border-radius:8px; overflow:hidden; background:var(--maroon-2); position:relative; border:1px solid var(--line)}
+.dish .ph img{width:100%; height:100%; object-fit:cover}
+.dish .ph .blank{position:absolute; inset:0; display:grid; place-items:center; color:var(--gold-soft); font-family:var(--display); font-size:1.15rem; text-align:center; padding:20px; background:radial-gradient(circle at 50% 40%, #4E171B, var(--maroon-2) 75%)}
+.dish h3{font-size:1.45rem; margin:16px 0 4px}
+.dish p{margin:0; color:var(--muted); font-size:.98rem}
+.dish .price{color:var(--gold-soft); font-weight:600; margin-top:6px}
+
+/* menu */
+#menu{background:var(--black-2)}
+.menu-top{display:flex; justify-content:space-between; align-items:end; gap:20px; flex-wrap:wrap; margin-bottom:24px}
+.tabs{display:flex; gap:8px; overflow-x:auto; padding-bottom:10px; margin-bottom:26px; scrollbar-width:thin}
+.tabs button{flex:none; background:transparent; border:1px solid var(--line); color:var(--cream); padding:9px 18px; border-radius:999px; font:inherit; font-size:.95rem; cursor:pointer; white-space:nowrap}
+.tabs button[aria-selected="true"]{background:var(--gold); border-color:var(--gold); color:var(--black); font-weight:600}
+.items{display:grid; grid-template-columns:1fr 1fr; gap:4px 56px}
+@media (max-width:760px){.items{grid-template-columns:1fr}}
+.item{padding:16px 0; border-bottom:1px solid rgba(242,228,203,.08)}
+.item .row{display:flex; align-items:baseline; gap:10px}
+.item .name{font-family:var(--display); font-size:1.2rem; color:var(--cream)}
+.item .dots{flex:1; border-bottom:1.5px dotted rgba(216,164,67,.35); transform:translateY(-4px)}
+.item .p{font-weight:600; color:var(--gold); white-space:nowrap}
+.item .d{margin:4px 0 0; color:var(--muted); font-size:.95rem; line-height:1.5}
+.veg{display:inline-block; width:14px; height:14px; border:1.5px solid var(--leaf); border-radius:3px; position:relative; vertical-align:middle; margin-left:4px; flex:none}
+.veg::after{content:""; position:absolute; inset:3px; border-radius:50%; background:var(--leaf)}
+.group h3{font-size:1.4rem; margin:8px 0 4px; padding-top:14px}
+.note{font-size:.9rem; color:var(--muted); margin-top:24px; display:flex; align-items:center; gap:8px; flex-wrap:wrap}
+
+/* visit band */
+.band{background:linear-gradient(160deg, var(--maroon) 0%, var(--maroon-2) 60%, var(--black) 100%)}
+.band .head p{color:#D9C7A8}
+.cols{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+@media (max-width:860px){.cols{grid-template-columns:1fr}}
+.panel{border:1px solid var(--line); border-radius:10px; padding:34px 28px; background:rgba(18,14,12,.45)}
+.panel h3{font-size:1.6rem; margin-bottom:10px}
+.panel p{margin:0 0 22px; color:#D9C7A8}
+.hours{font-family:var(--display); font-size:1.35rem; color:var(--cream); line-height:1.5; margin-bottom:22px}
+.panel .ctas{gap:10px}
+
+/* reservation */
+.reserve{display:grid; grid-template-columns:1fr 1.2fr; gap:48px; align-items:start}
+@media (max-width:860px){.reserve{grid-template-columns:1fr}}
+form{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+form label{display:flex; flex-direction:column; gap:6px; font-size:.9rem; color:var(--muted)}
+form .full{grid-column:1/-1}
+input,select,textarea{font:inherit; font-size:1rem; padding:11px 12px; border:1px solid rgba(242,228,203,.2); border-radius:8px; background:#1E1714; color:var(--cream); width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--gold); outline:none}
+textarea{min-height:80px; resize:vertical}
+form .btn{justify-self:start; background:var(--gold); color:var(--black)}
+.formmsg{grid-column:1/-1; font-size:.92rem; color:var(--gold-soft); margin:0}
+
+/* events */
+#events{background:var(--black-2)}
+.events{display:grid; grid-template-columns:1.1fr 1fr; gap:48px; align-items:center}
+@media (max-width:860px){.events{grid-template-columns:1fr}}
+.events ul{padding:0; margin:20px 0 28px; list-style:none}
+.events li{padding:11px 0 11px 26px; position:relative; border-bottom:1px solid rgba(242,228,203,.08)}
+.events li::before{content:""; position:absolute; left:4px; top:21px; width:7px; height:7px; background:var(--gold); transform:rotate(45deg)}
+.events .btn{background:var(--gold); color:var(--black)}
+.arch-ph{aspect-ratio:4/3; border-radius:10px; border:1px solid var(--line); background:radial-gradient(circle at 50% 40%, #4E171B, var(--maroon-2) 75%); display:grid; place-items:center; color:var(--gold-soft); font-family:var(--display); overflow:hidden}
+.arch-ph img{width:100%; height:100%; object-fit:cover}
+
+/* gallery */
+.gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:10px}
+@media (max-width:760px){.gallery{grid-template-columns:repeat(2,1fr)}}
+.gallery div{aspect-ratio:1; background:var(--maroon-2); border:1px solid rgba(216,164,67,.15); border-radius:6px; overflow:hidden; display:grid; place-items:center; color:rgba(233,196,122,.55); font-size:.88rem}
+.gallery img{width:100%; height:100%; object-fit:cover}
+
+/* contact + footer */
+.contact{display:grid; grid-template-columns:1fr 1fr; gap:40px}
+@media (max-width:760px){.contact{grid-template-columns:1fr}}
+.contact dl{margin:0; display:grid; grid-template-columns:auto 1fr; gap:12px 20px}
+.contact dt{color:var(--muted); font-size:.92rem}
+.contact dd{margin:0}
+.contact dd a{color:var(--gold-soft); text-decoration-color:rgba(216,164,67,.35)}
+.mapcard{border-radius:10px; background:radial-gradient(ellipse at 80% 30%, #5A1A1E, var(--maroon-2) 70%); border:1px solid var(--line); padding:30px; display:flex; flex-direction:column; justify-content:space-between; gap:20px; min-height:220px}
+.mapcard .addr{font-family:var(--display); font-size:1.7rem; color:var(--gold)}
+footer{background:#0B0807; color:var(--muted); padding:40px 0; font-size:.92rem; border-top:3px solid var(--gold)}
+footer .wrap{display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; align-items:center}
+footer .social{display:flex; gap:18px}
+footer a{color:var(--gold-soft); text-decoration:none}
+
+.fab{position:fixed; right:16px; bottom:calc(16px + env(safe-area-inset-bottom,0px)); z-index:30; background:#25D366; color:#fff; width:54px; height:54px; border-radius:50%; display:grid; place-items:center; box-shadow:0 6px 18px rgba(0,0,0,.4); text-decoration:none}
+.fab svg{width:28px; height:28px}
+
+@media (prefers-reduced-motion:no-preference){
+  .hero-inner > *{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+  .hero-inner > *:nth-child(2){animation-delay:.08s} .hero-inner > *:nth-child(3){animation-delay:.16s}
+  .hero-inner > *:nth-child(4){animation-delay:.24s} .hero-inner > *:nth-child(5){animation-delay:.32s}
+  @keyframes rise{from{opacity:0; transform:translateY(18px)}to{opacity:1; transform:none}}
+}
+
+/* ===== motion & ornament ===== */
+.hero{position:relative; overflow:hidden; isolation:isolate}
+.hero .wrap{position:relative; z-index:2}
+#embers{position:absolute; inset:0; width:100%; height:100%; z-index:1; pointer-events:none}
+.mandala{position:absolute; z-index:0; right:-180px; top:50%; width:620px; height:620px; margin-top:-310px; color:var(--gold); opacity:.13; pointer-events:none}
+@media (max-width:700px){.mandala{right:-260px; width:520px; height:520px; margin-top:-200px; opacity:.1}}
+.hero svg.lotus path{stroke-dasharray:1; stroke-dashoffset:0}
+.hero svg.lotus .glow{fill:var(--gold); opacity:0}
+.divider{display:flex; justify-content:center; padding:22px 22px 0; background:inherit}
+.divider svg{width:min(520px,100%); height:40px; color:var(--gold); overflow:visible}
+.divider path, .divider circle{stroke-dasharray:1; stroke-dashoffset:0}
+.steam{position:absolute; left:50%; top:10%; width:90px; height:110px; margin-left:-45px; z-index:2; pointer-events:none; color:#fff; opacity:.55}
+.steam path{fill:none; stroke:currentColor; stroke-width:3; stroke-linecap:round; opacity:0}
+.diya{display:block; width:46px; height:46px; margin-bottom:10px}
+.diya .flame{transform-origin:24px 26px; fill:url(#flameGrad)}
+.panel .diya{margin-left:0}
+@media (prefers-reduced-motion:no-preference){
+  .mandala{animation:spin 160s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .hero svg.lotus path{stroke-dashoffset:1; animation:draw 1.8s .2s cubic-bezier(.6,.1,.2,1) forwards}
+  .hero svg.lotus path:nth-child(2),.hero svg.lotus path:nth-child(3){animation-delay:.5s}
+  .hero svg.lotus path:nth-child(4),.hero svg.lotus path:nth-child(5){animation-delay:.8s}
+  .hero svg.lotus .glow{animation:bloom 1.4s 2s ease-out forwards}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @keyframes bloom{0%{opacity:0}40%{opacity:.35}100%{opacity:.12}}
+  .divider path, .divider circle{stroke-dashoffset:1; transition:stroke-dashoffset 1.6s cubic-bezier(.6,.1,.2,1)}
+  .divider.in path, .divider.in circle{stroke-dashoffset:0}
+  .divider .gem{opacity:0; transform:scale(.4); transform-origin:center; transform-box:fill-box; transition:opacity .5s 1.1s, transform .6s 1.1s cubic-bezier(.3,1.6,.5,1)}
+  .divider.in .gem{opacity:1; transform:none}
+  .steam path{animation:steam 3.6s ease-in-out infinite}
+  .steam path:nth-child(2){animation-delay:1.2s} .steam path:nth-child(3){animation-delay:2.4s}
+  @keyframes steam{0%{opacity:0; transform:translateY(30px)}30%{opacity:.8}100%{opacity:0; transform:translateY(-24px)}}
+  .diya .flame{animation:flicker 2.4s ease-in-out infinite}
+  @keyframes flicker{0%,100%{transform:scale(1,1) rotate(0)}25%{transform:scale(.94,1.06) rotate(-3deg)}50%{transform:scale(1.04,.95) rotate(2deg)}75%{transform:scale(.97,1.04) rotate(-1deg)}}
+  .dish .ph img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+  .dish:hover .ph img{transform:scale(1.05)}
+}
+@media (prefers-reduced-motion:reduce){ .steam{display:none} #embers{display:none} }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs><radialGradient id="flameGrad" cx="50%" cy="70%" r="60%"><stop offset="0" stop-color="#FFF4C2"/><stop offset=".45" stop-color="#FFC24A"/><stop offset="1" stop-color="#E0561B"/></radialGradient></defs>
+  <symbol id="lotus" viewBox="0 0 120 80">
+    <g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M60 6 C48 24 48 50 60 72 C72 50 72 24 60 6Z"/>
+      <path d="M58 72 C44 60 34 40 30 22 C22 42 34 64 58 72Z"/>
+      <path d="M62 72 C76 60 86 40 90 22 C98 42 86 64 62 72Z"/>
+      <path d="M56 72 C38 70 16 60 4 48 C14 66 34 74 56 72Z"/>
+      <path d="M64 72 C82 70 104 60 116 48 C106 66 86 74 64 72Z"/>
+    </g>
+  </symbol>
+</svg>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Indian Heritage home"><svg viewBox="0 0 120 80"><use href="#lotus"/></svg><span>Indian Heritage</span></a>
+    <nav aria-label="Main" style="flex:1; justify-content:flex-end">
+      <div class="lang hlang" role="group" aria-label="Language / Γλώσσα"><button type="button" data-lang="en" aria-pressed="true" lang="en" title="English (UK)">EN</button><button type="button" data-lang="el" aria-pressed="false" lang="el" title="Ελληνικά">ΕΛ</button></div>
+      <button class="navbtn" aria-expanded="false" aria-controls="navlist" aria-label="Open navigation">☰</button>
+      <ul id="navlist">
+        <li><a href="#menu" data-en="Our menu" data-el="Μενού">Our menu</a></li>
+        <li><a href="#reserve" data-en="Book a table" data-el="Κράτηση">Book a table</a></li>
+        <li><a href="#visit" data-en="Delivery" data-el="Delivery">Delivery</a></li>
+        <li><a href="#events" data-en="Events" data-el="Εκδηλώσεις">Events</a></li>
+        <li><a href="#gallery" data-en="Gallery" data-el="Φωτογραφίες">Gallery</a></li>
+        <li><a href="#contact" data-en="Find us" data-el="Επικοινωνία">Find us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <canvas id="embers" aria-hidden="true"></canvas>
+    <svg class="mandala" id="mandala" viewBox="-100 -100 200 200" aria-hidden="true"></svg>
+    <div class="wrap">
+      <div class="hero-inner">
+        <svg class="lotus" viewBox="0 0 120 80" aria-hidden="true">
+          <path class="glow" d="M60 6 C48 24 48 50 60 72 C72 50 72 24 60 6Z"/>
+          <g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+          <path pathLength="1" d="M60 6 C48 24 48 50 60 72 C72 50 72 24 60 6Z"/>
+          <path pathLength="1" d="M58 72 C44 60 34 40 30 22 C22 42 34 64 58 72Z"/>
+          <path pathLength="1" d="M62 72 C76 60 86 40 90 22 C98 42 86 64 62 72Z"/>
+          <path pathLength="1" d="M56 72 C38 70 16 60 4 48 C14 66 34 74 56 72Z"/>
+          <path pathLength="1" d="M64 72 C82 70 104 60 116 48 C106 66 86 74 64 72Z"/>
+          </g></svg>
+        <h1>Indian Heritage</h1>
+        <p class="greet"><span lang="hi">स्वागतम्</span>, <span lang="el">Καλώς ήρθατε</span>, <span lang="en">Welcome!</span></p>
+        <p class="lede" data-en="Authentic Indian cuisine, cooked in a clay tandoor and served with Greek wine. Biryani, butter chicken and fresh naan, a short walk from the centre of Athens." data-el="Αυθεντική ινδική κουζίνα, ψημένη σε πήλινο ταντούρ και σερβιρισμένη με ελληνικό κρασί. Μπιριάνι, butter chicken και φρέσκο νάαν, λίγα λεπτά από το κέντρο της Αθήνας.">Authentic Indian cuisine, cooked in a clay tandoor and served with Greek wine. Biryani, butter chicken and fresh naan, a short walk from the centre of Athens.</p>
+        <div class="ctas">
+          <a class="btn solid" href="#reserve" data-en="Reserve a table" data-el="Κλείστε τραπέζι">Reserve a table</a>
+          <a class="btn line" href="#menu" data-en="See the menu" data-el="Δείτε το μενού">See the menu</a>
+        </div>
+        <p class="status" id="status" role="status"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider" aria-hidden="true"><svg viewBox="0 0 520 40"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+    <path pathLength="1" d="M248 20 H40 M40 20 C30 20 26 12 18 14 C12 16 14 24 20 22"/>
+    <path pathLength="1" d="M272 20 H480 M480 20 C490 20 494 12 502 14 C508 16 506 24 500 22"/>
+    <circle pathLength="1" cx="260" cy="20" r="12"/></g>
+    <path class="gem" d="M260 10 L268 20 L260 30 L252 20Z" fill="currentColor"/></svg></div>
+  <section id="signature">
+    <div class="wrap">
+      <div class="head">
+        <h2 data-en="Cooked the way it is at home" data-el="Μαγειρεμένο όπως στο σπίτι">Cooked the way it is at home</h2>
+        <p data-en="Clay-oven tandoor, slow-simmered curries and fresh bread from the oven, with plenty for vegetarians, a short walk from the centre of Athens." data-el="Πήλινο φούρνο ταντούρ, κάρι σε σιγανή φωτιά και φρεσκοψημένο ψωμί, με πολλές επιλογές για χορτοφάγους, λίγα λεπτά από το κέντρο της Αθήνας.">Clay-oven tandoor, slow-simmered curries and fresh bread from the oven, with plenty for vegetarians, a short walk from the centre of Athens.</p>
+      </div>
+      <div class="dishes" id="dishes"></div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><svg viewBox="0 0 520 40"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+    <path pathLength="1" d="M248 20 H40 M40 20 C30 20 26 12 18 14 C12 16 14 24 20 22"/>
+    <path pathLength="1" d="M272 20 H480 M480 20 C490 20 494 12 502 14 C508 16 506 24 500 22"/>
+    <circle pathLength="1" cx="260" cy="20" r="12"/></g>
+    <path class="gem" d="M260 10 L268 20 L260 30 L252 20Z" fill="currentColor"/></svg></div>
+  <section id="menu">
+    <div class="wrap">
+      <div class="menu-top">
+        <div class="head" style="margin:0">
+          <h2 data-en="Menu" data-el="Μενού">Menu</h2>
+          <p data-en="Prices in euro, VAT included." data-el="Τιμές σε ευρώ, συμπεριλαμβάνεται ΦΠΑ.">Prices in euro, VAT included.</p>
+        </div>
+      </div>
+      <div class="tabs" role="tablist" id="tabs"></div>
+      <div class="items" id="items" role="tabpanel"></div>
+      <p class="note"><span class="veg" aria-hidden="true"></span><span data-en="Vegetarian. Jain food and spice level on request; tell us about any allergies." data-el="Χορτοφαγικό. Φαγητό Jain και βαθμός καυτερού κατόπιν αιτήματος· ενημερώστε μας για αλλεργίες.">Vegetarian. Jain food and spice level on request; tell us about any allergies.</span></p>
+    </div>
+  </section>
+
+  <section class="band" id="visit">
+    <div class="wrap">
+      <div class="head">
+        <h2 data-en="Eat in, or at home" data-el="Στο εστιατόριο ή στο σπίτι σας">Eat in, or at home</h2>
+        <p data-en="Same kitchen, same spices, wherever you are eating tonight." data-el="Ίδια κουζίνα, ίδια μπαχαρικά, όπου κι αν φάτε απόψε.">Same kitchen, same spices, wherever you are eating tonight.</p>
+      </div>
+      <div class="cols">
+        <div class="panel">
+          <svg class="diya" viewBox="0 0 48 48" aria-hidden="true"><path class="flame" d="M24 6 C28 13 30 18 27 23 C26 25.5 22 25.5 21 23 C18 18 20 13 24 6Z"/><path d="M6 28 H42 C40 37 33 41 24 41 C15 41 8 37 6 28Z" fill="var(--gold)"/><path d="M18 41 H30 L28 45 H20Z" fill="var(--gold)" opacity=".7"/></svg>
+          <h3 data-en="Opening hours" data-el="Ωράριο λειτουργίας">Opening hours</h3>
+          <div class="hours" id="hours"></div>
+          <a class="btn line" href="#contact" data-en="Get directions" data-el="Πώς θα έρθετε">Get directions</a>
+        </div>
+        <div class="panel">
+          <h3 data-en="Book a table" data-el="Κράτηση τραπεζιού">Book a table</h3>
+          <p data-en="Choose a date, time and party size and we will confirm on WhatsApp." data-el="Επιλέξτε ημερομηνία, ώρα και αριθμό ατόμων και θα σας επιβεβαιώσουμε στο WhatsApp.">Choose a date, time and party size and we will confirm on WhatsApp.</p>
+          <a class="btn solid" href="#reserve" data-en="Reserve now" data-el="Κράτηση τώρα">Reserve now</a>
+        </div>
+        <div class="panel">
+          <h3 data-en="Order delivery" data-el="Παραγγελία delivery">Order delivery</h3>
+          <p data-en="Hot food at your door through our delivery partners." data-el="Ζεστό φαγητό στην πόρτα σας μέσω των συνεργατών μας.">Hot food at your door through our delivery partners.</p>
+          <div class="ctas" id="delivery"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><svg viewBox="0 0 520 40"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+    <path pathLength="1" d="M248 20 H40 M40 20 C30 20 26 12 18 14 C12 16 14 24 20 22"/>
+    <path pathLength="1" d="M272 20 H480 M480 20 C490 20 494 12 502 14 C508 16 506 24 500 22"/>
+    <circle pathLength="1" cx="260" cy="20" r="12"/></g>
+    <path class="gem" d="M260 10 L268 20 L260 30 L252 20Z" fill="currentColor"/></svg></div>
+  <section id="reserve">
+    <div class="wrap reserve">
+      <div class="head">
+        <h2 data-en="Book your table" data-el="Κλείστε το τραπέζι σας">Book your table</h2>
+        <p data-en="Send your request and we will reply on WhatsApp to confirm. For groups of more than 10, call us directly." data-el="Στείλτε το αίτημά σας και θα σας απαντήσουμε στο WhatsApp για επιβεβαίωση. Για παρέες άνω των 10 ατόμων, καλέστε μας απευθείας.">Send your request and we will reply on WhatsApp to confirm. For groups of more than 10, call us directly.</p>
+      </div>
+      <form id="bookform" novalidate>
+        <label><span data-en="Name" data-el="Όνομα">Name</span><input name="name" autocomplete="name" required></label>
+        <label><span data-en="Phone" data-el="Τηλέφωνο">Phone</span><input name="phone" type="tel" autocomplete="tel" required></label>
+        <label><span data-en="Date" data-el="Ημερομηνία">Date</span><input name="date" type="date" required></label>
+        <label><span data-en="Time" data-el="Ώρα">Time</span><select name="time" id="timesel" required></select></label>
+        <label><span data-en="Guests" data-el="Άτομα">Guests</span><select name="guests" id="guestsel"></select></label>
+        <label><span data-en="Occasion" data-el="Περίσταση">Occasion</span><select name="occasion"><option value="None" data-en="None" data-el="Καμία">None</option><option value="Birthday" data-en="Birthday" data-el="Γενέθλια">Birthday</option><option value="Anniversary" data-en="Anniversary" data-el="Επέτειος">Anniversary</option><option value="Business" data-en="Business" data-el="Επαγγελματικό">Business</option></select></label>
+        <label class="full"><span data-en="Notes" data-el="Σημειώσεις">Notes</span><textarea name="notes" placeholder="Allergies, Jain food, high chair…" data-ph-en="Allergies, Jain food, high chair…" data-ph-el="Αλλεργίες, φαγητό Jain, παιδικό καρεκλάκι…"></textarea></label>
+        <button class="btn" type="submit" data-en="Send booking request" data-el="Αποστολή αιτήματος κράτησης">Send booking request</button>
+        <p class="formmsg" id="formmsg" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <section id="events">
+    <div class="wrap events">
+      <div>
+        <div class="head" style="margin:0">
+          <h2 data-en="Meetings &amp; events" data-el="Εκδηλώσεις &amp; συναντήσεις">Meetings & events</h2>
+          <p data-en="Birthdays, office lunches and family gatherings, with a set menu planned around your guests." data-el="Γενέθλια, επαγγελματικά γεύματα και οικογενειακές συγκεντρώσεις, με σετ μενού σχεδιασμένο για τους καλεσμένους σας.">Birthdays, office lunches and family gatherings, with a set menu planned around your guests.</p>
+        </div>
+        <ul>
+          <li data-en="Private dining for groups" data-el="Ιδιωτικό δείπνο για παρέες">Private dining for groups</li>
+          <li data-en="Set menus with vegetarian and Jain options" data-el="Σετ μενού με χορτοφαγικές επιλογές και φαγητό Jain">Set menus with vegetarian and Jain options</li>
+          <li data-en="Catering for events outside the restaurant" data-el="Catering για εκδηλώσεις εκτός εστιατορίου">Catering for events outside the restaurant</li>
+        </ul>
+        <a class="btn" id="eventsbtn" href="#" data-en="Ask about an event" data-el="Ρωτήστε για εκδήλωση">Ask about an event</a>
+      </div>
+      <div class="arch-ph" id="eventsimg"><span data-en="Restaurant photo" data-el="Φωτογραφία εστιατορίου">Restaurant photo</span></div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><svg viewBox="0 0 520 40"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+    <path pathLength="1" d="M248 20 H40 M40 20 C30 20 26 12 18 14 C12 16 14 24 20 22"/>
+    <path pathLength="1" d="M272 20 H480 M480 20 C490 20 494 12 502 14 C508 16 506 24 500 22"/>
+    <circle pathLength="1" cx="260" cy="20" r="12"/></g>
+    <path class="gem" d="M260 10 L268 20 L260 30 L252 20Z" fill="currentColor"/></svg></div>
+  <section id="gallery">
+    <div class="wrap">
+      <div class="head"><h2 data-en="Gallery" data-el="Φωτογραφίες">Gallery</h2></div>
+      <div class="gallery" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-top:20px">
+    <div class="wrap contact">
+      <div>
+        <div class="head"><h2 data-en="Find us" data-el="Πού θα μας βρείτε">Find us</h2></div>
+        <dl id="contactlist"></dl>
+      </div>
+      <div class="mapcard">
+        <div class="addr" id="addr"></div>
+        <a class="btn solid" id="maplink" target="_blank" rel="noopener" style="align-self:start" data-en="Open in Google Maps" data-el="Άνοιγμα στο Google Maps">Open in Google Maps</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="yr"></span> <span data-en="Indian Heritage, Athens" data-el="Indian Heritage, Αθήνα">Indian Heritage, Athens</span></div>
+    <div class="social" id="social"></div>
+  </div>
+</footer>
+
+<a class="fab" id="wa" target="_blank" rel="noopener" aria-label="Message us on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3Z"/></svg>
+</a>
+
+<script>
+/* ===================== CONFIG: fill in before going live ===================== */
+const CONFIG = {
+  address: "Imittou 95, Athina 116 33",
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Imittou+95+Athina+11633",
+  phone: "+30 210 000 0000",          // TODO landline
+  mobile: "+30 690 000 0000",         // TODO mobile
+  whatsapp: "306900000000",           // TODO digits only, with 30 country code
+  email: "hello@indianheritage.gr",   // TODO
+  hours: [["Monday to Sunday","Δευτέρα έως Κυριακή","12:30 – 00:00"]],  // TODO confirm
+  openFrom: "12:30", openTo: "23:30",              // booking slot range
+  statusOpen: "12:30", statusClose: "00:00",       // drives the "Open now / Opening at" line (Athens time)
+  delivery: [["Wolt","#"],["efood","#"]],          // TODO real store links
+  social: [["Instagram","#"],["TikTok","#"],["TripAdvisor","#"],["Google","#"]],
+  // Paste image URLs (or file names once hosted, e.g. "img/butter-chicken.jpg"). Empty = placeholder.
+  signature: [
+    ["Butter Chicken","Boneless chicken in a creamy tomato butter sauce.","Κοτόπουλο σε κρεμώδη σάλτσα ντομάτας με βούτυρο.","10,50",""],
+    ["Tandoori Mixed Plate","Malai tikka, seekh kebab and chicken tikka from the clay oven.","Μαλάι τίκα, σις κεμπάπ και κοτόπουλο τίκα από τον πήλινο φούρνο.","18,00",""],
+    ["Dal Makhani","Black lentils simmered slowly overnight, finished with cream.","Μαύρες φακές σιγοβρασμένες όλη τη νύχτα, με κρέμα.","9,00",""],
+    ["Garlic Naan","Baked to order against the wall of the tandoor.","Ψήνεται κατά παραγγελία στο τοίχωμα του ταντούρ.","3,50",""]
+  ],
+  eventsImage: "",
+  gallery: ["","","","","","","",""]
+};
+/* ============================================================================ */
+const MENU = [
+ {id:"starters", en:"Starters", el:"Ορεκτικά", items:[
+  ["Vegetable Samosa (3 pcs)","6,50","Crispy triangular pastry filled with potatoes, peas and lightly spiced vegetables.","Τηγανητά τριγωνάκια γεμιστά με απαλά καρυκευμένο πουρέ πατάτας και μπιζέλια.",1],
+  ["Onion Bhaji","6,50","Sliced onion coated in gram flour and Indian spices, fried in vegetable oil.","Φέτες κρεμμυδιού με αλεύρι ρεβιθιού και φρέσκα μπαχαρικά, τηγανισμένες σε λάδι.",1],
+  ["Paneer Pakora","8,00","Cottage cheese fried in mildly spiced gram flour.","Σπιτικό τυρί σε ζύμη από αλεύρι ρεβιθιού και μπαχαρικά, τηγανισμένο σε φυτικό λάδι.",1],
+  ["Mix Starter","10,00","Vegetable samosa, onion bhaji, aloo pakora and paneer pakora.","Σαμόσα λαχανικών, μπάτζι κρεμμυδιού, πατάτα πακόρα, πανίρ πακόρα.",1],
+  ["Chicken Pakora","8,00","Chicken marinated in spices, dipped in gram flour and deep fried.","Μαριναρισμένο κοτόπουλο σε μείγμα μπαχαρικών, παναρισμένο με ρεβυθάλευρο και τηγανισμένο.",0],
+  ["Fish Pakora","9,00","Fish fillets fried in mildly spiced gram flour.","Φιλέτο ψαριού σε αλεύρι ρεβιθιού με μπαχαρικά, τηγανισμένο σε φυτικό λάδι.",0],
+  ["Papaddam","2,00","Traditional crisp lentil cracker.","Παραδοσιακό τραγανό ψωμί από φακές.",1],
+  ["French Fries","5,00","","Πατάτες τηγανητές.",1]]},
+ {id:"salads", en:"Salads, Raita & Soups", el:"Σαλάτες, Ράιτα & Σούπες", items:[
+  ["Fresh Green Salad","6,00","Cucumber, lettuce, tomato, feta and olives.","Αγγούρι, μαρούλι, τομάτα, φέτα και ελιές.",1],
+  ["Chicken Tikka Salad","7,90","Garden salad with chicken tikka, cucumber, lettuce, tomato, olive oil and green mint sauce.","Σαλάτα με κοτόπουλο τίκα, αγγούρι, μαρούλι, τομάτα, ελαιόλαδο και σάλτσα δυόσμου.",0],
+  ["Raita","5,50","Yoghurt with cucumber and Indian spices.","Γιαούρτι με αγγούρι και ινδικά μπαχαρικά.",1],
+  ["Pineapple Raita","6,50","Yoghurt with pineapple and Indian spices.","Γιαούρτι με ανανά και ινδικά μπαχαρικά.",1],
+  ["Plain Yoghurt","4,00","","Σκέτο γιαούρτι.",1],
+  ["Vegetable Soup","6,00","Mixed vegetables, subtly flavoured with Indian spices.","Σούπα με ανάμεικτα λαχανικά, αρωματισμένη με ινδικά μπαχαρικά.",1],
+  ["Mushroom Soup","6,50","Mushrooms and Indian spices.","Σούπα με μανιτάρια και ινδικά μπαχαρικά.",1],
+  ["Chicken Soup","7,50","Chicken soup with Indian spices.","Κοτόσουπα με ινδικά μπαχαρικά.",0]]},
+ {id:"tandoor", en:"From the Tandoor", el:"Από το Ταντούρ", items:[
+  ["Tandoori Mixed Plate","18,00","Chicken malai tikka, mutton seekh kebab and chicken tikka.","Κοτόπουλο μαλάι τίκα, αρνίσιο σις κεμπάπ, κοτόπουλο τίκα.",0],
+  ["Chicken Tikka","11,00","Boneless chicken in ginger, garlic, yoghurt and spices, roasted in the clay tandoor.","Κοτόπουλο μαριναρισμένο σε γιαούρτι, τζίντζερ και σκόρδο, ψημένο σε ταντούρ.",0],
+  ["Chicken Malai Tikka","11,50","Chicken breast in yoghurt, cheese, cashew paste, white pepper and mild spices.","Στήθος κοτόπουλου σε τυρί κρέμα και πάστα κάσιους, με ινδικά μπαχαρικά.",0],
+  ["Tandoori Chicken (2 legs)","11,00","Bone-in chicken legs in lemon, ginger, garlic, yoghurt and spices.","Μπούτι κοτόπουλου με λεμόνι, τζίντζερ, σκόρδο, μπαχαρικά και γιαούρτι, ψημένο σε ταντούρ.",0],
+  ["Mutton Seekh Kebab","11,00","Minced mutton rolls with ginger, garlic and Indian spices.","Ρολά από αρνίσιο κιμά με τζίντζερ και σκόρδο, ψημένα σε ταντούρ.",0],
+  ["Paneer Tikka","14,00","Homemade cheese, onion, capsicum and tomato in a special masala.","Σπιτικό τυρί, κρεμμύδι, πιπεριά, τομάτα και σάλτσα μασάλα, ψημένα σε ταντούρ.",1],
+  ["Prawn Tandoori","18,00","Prawns in a mild house spice blend.","Γαρίδες σε ελαφρύ μείγμα μπαχαρικών, ψημένες σε ταντούρ.",0],
+  ["Fish Tikka","14,00","Fish fillets in yoghurt, lemon, ginger, garlic and house paste.","Φιλέτα ψαριού σε γιαούρτι, λεμόνι, τζίντζερ και σκόρδο, ψημένα σε ταντούρ.",0]]},
+ {id:"chicken", en:"Chicken", el:"Κοτόπουλο", items:[
+  ["Chicken Tikka Masala","10,50","Boneless chicken in a creamy tomato-yoghurt sauce with ginger and garlic.","Κοτόπουλο σε κρεμώδη σάλτσα ντομάτας και γιαουρτιού με τζίντζερ και σκόρδο.",0],
+  ["Butter Chicken","10,50","Boneless chicken in a creamy tomato butter sauce.","Κοτόπουλο σε κρεμώδη σάλτσα ντομάτας με βούτυρο.",0],
+  ["Chicken Korma","11,50","Chicken breast in a thick, creamy sauce of dried fruit and cashews.","Στήθος κοτόπουλου σε κρεμώδη σάλτσα με ξηρούς καρπούς και κάσιους.",0],
+  ["Chicken Kashmiri","11,50","Chicken breast with cream, cashews, almonds, raisins and red gravy, finished with green apple.","Στήθος κοτόπουλου με κρέμα, κάσιους, αμύγδαλα, σταφίδες και κόκκινη σάλτσα, με πράσινο μήλο.",0],
+  ["Chicken Curry","10,50","Traditional chicken curry with our house spices.","Παραδοσιακό κοτόπουλο κάρι με τα μπαχαρικά του σπιτιού.",0],
+  ["Kadahi Chicken","10,50","Boneless chicken with crushed ginger, onion, green pepper, tomato and coriander seed.","Κοτόπουλο με τζίντζερ, κρεμμύδι, πράσινη πιπεριά, ντομάτα και κόλιανδρο.",0],
+  ["Chicken Saag","10,50","Chicken cooked in a spiced spinach gravy.","Κοτόπουλο σε σάλτσα σπανάκι με ινδικά μπαχαρικά.",0],
+  ["Chicken Madras","10,50","Chicken with coconut milk in a hot, tangy tomato, onion, ginger and garlic sauce.","Κοτόπουλο με γάλα καρύδας σε πικάντικη σάλτσα ντομάτας, τζίντζερ και σκόρδου.",0],
+  ["Chicken Vindaloo","10,50","Chicken and potato in our hot, tangy tomato and ginger sauce.","Κοτόπουλο και πατάτες σε πικάντικη σάλτσα ντομάτας και τζίντζερ.",0]]},
+ {id:"lamb", en:"Lamb & Seafood", el:"Αρνί & Θαλασσινά", items:[
+  ["Lamb Rogan Josh","13,50","Lamb cubes in an onion and tomato gravy.","Αρνί μαγειρεμένο με κρεμμύδια και ντομάτες.",0],
+  ["Tawa Gosht","13,50","Lamb with onion and fresh tomato in a thick, herby sauce.","Αρνί με κρεμμύδια και φρέσκια ντομάτα σε πηχτή σάλτσα με μυρωδικά.",0],
+  ["Lamb Saag","13,50","Lamb and spinach in a special curry sauce.","Αρνί με σπανάκι σε σπέσιαλ σάλτσα κάρι.",0],
+  ["Lamb Kadahi","13,50","Lamb with ginger, onion, green pepper and tomato in a thick sauce.","Αρνί με τζίντζερ, κρεμμύδι, πράσινη πιπεριά και ντομάτα σε πηχτή σάλτσα.",0],
+  ["Lamb Vindaloo","13,50","Lamb and potatoes in a hot, spicy sauce.","Αρνί με πατάτες σε πικάντικη σάλτσα.",0],
+  ["Prawn Vindaloo","15,50","Prawns and potatoes in a hot, tangy sauce.","Γαρίδες με πατάτες σε πικάντικη σάλτσα.",0],
+  ["Prawn Masala","15,50","Prawns with onion and tomato in a tangy masala sauce.","Γαρίδες με κρεμμύδι και ντομάτα σε σάλτσα μασάλα.",0],
+  ["Prawn Saag","15,50","Prawns and spinach sautéed in Indian spices.","Γαρίδες με σπανάκι σωταρισμένες σε ινδικά μπαχαρικά.",0],
+  ["Fish Curry","13,50","Grilled fish in an onion and tomato gravy.","Ψητό ψάρι σε σάλτσα κάρι με κρεμμύδι και ντομάτα.",0],
+  ["Fish Masala","13,50","Fish with onion and tomato in a thick, tangy masala.","Ψάρι με κρεμμύδι και ντομάτα σε πηχτή σάλτσα μασάλα.",0]]},
+ {id:"veg", en:"Vegetarian", el:"Χορτοφαγικά", items:[
+  ["Shahi Paneer","9,50","Indian cheese in a mild, creamy tomato sauce with dried fruit and cashews.","Ινδικό τυρί σε κρεμώδη σάλτσα ντομάτας με ξηρούς καρπούς και κάσιους.",1],
+  ["Kadahi Paneer","9,50","Paneer with capsicum, tomato, onion and traditional spices.","Τυρί πανίρ με πιπεριά, ντομάτα, κρεμμύδι και ινδικά μπαχαρικά.",1],
+  ["Mattar Paneer","9,50","Peas and homemade cheese in a traditional gravy.","Μπιζέλια και σπιτικό τυρί σε παραδοσιακή ινδική σάλτσα.",1],
+  ["Saag Paneer","9,50","Spinach and homemade cheese sautéed in Indian spices.","Σπανάκι και σπιτικό τυρί σωταρισμένα με μπαχαρικά.",1],
+  ["Bhindi Masala","9,50","Okra in masala sauce with onion and tomato.","Μπάμιες σε σάλτσα μασάλα με κρεμμύδια και ντομάτες.",1],
+  ["Jeera Aloo (Bombay)","8,50","Potatoes with cumin, onion, tomato and house spices.","Πατάτες με κύμινο, κρεμμύδια, ντομάτες και ινδικά μπαχαρικά.",1],
+  ["Aloo Gobi","9,50","Cauliflower and potato sautéed with cumin seed and spices.","Κουνουπίδι και πατάτες σωταρισμένα με κύμινο και μπαχαρικά.",1],
+  ["Chana Masala","9,50","Chickpeas with onion, ginger, garlic, tomato and spices.","Ρεβίθια με κρεμμύδι, τζίντζερ, σκόρδο, ντομάτα και μπαχαρικά.",1],
+  ["Mix Vegetable","9,00","Beans, carrots and potatoes in a house gravy.","Φασολάκια, καρότα και πατάτες σε ινδική σάλτσα.",1],
+  ["Dal Makhani","9,00","Whole black lentils slow-simmered with onion, ginger, garlic and tomato, finished with cream.","Μαύρες φακές σιγοβρασμένες με κρεμμύδι, τζίντζερ, σκόρδο και ντομάτα, με κρέμα.",1],
+  ["Dal Tadka","8,50","Yellow lentils with aromatic spices.","Κίτρινες φακές με αρωματικά μπαχαρικά.",1]]},
+ {id:"rice", en:"Biryani & Rice", el:"Μπιριάνι & Ρύζι", items:[
+  ["Veg Biryani","10,00","Basmati rice with garden vegetables and house spices.","Ρύζι μπασμάτι με λαχανικά, μπαχαρικά και γιαούρτι.",1],
+  ["Chicken Biryani","11,00","Spiced chicken cooked with basmati rice.","Μαριναρισμένο κοτόπουλο μαγειρεμένο με ρύζι μπασμάτι.",0],
+  ["Lamb Biryani","13,00","Lamb in house spices and herbs, cooked with basmati rice.","Αρνί με μπαχαρικά και βότανα, μαγειρεμένο με ρύζι μπασμάτι.",0],
+  ["Prawn Biryani","15,00","Prawns with spices and herbs, cooked with basmati rice.","Γαρίδες με μπαχαρικά και βότανα, μαγειρεμένες με ρύζι μπασμάτι.",0],
+  ["Boiled Rice","4,50","Plain basmati rice.","Βρασμένο ρύζι μπασμάτι.",1],
+  ["Pulao (Saffron Rice)","5,50","Basmati rice with saffron and butter.","Ρύζι μπασμάτι με σαφράν και βούτυρο.",1],
+  ["Zarda Pulao (sweet)","6,50","Rice with saffron, milk, coconut and dried fruit.","Ρύζι με σαφράν, γάλα, καρύδα και αποξηραμένα φρούτα.",1],
+  ["Mushroom Rice","6,50","Basmati rice with mushrooms.","Ρύζι μπασμάτι με μανιτάρια και μπαχαρικά.",1],
+  ["Jeera Rice","6,00","Basmati rice with cumin.","Ρύζι μπασμάτι με κύμινο.",1]]},
+ {id:"bread", en:"Breads", el:"Ψωμιά", items:[
+  ["Naan","2,50","Traditional flatbread baked in the tandoor.","Παραδοσιακή ινδική πίτα ψημένη στο ταντούρ.",1],
+  ["Butter Naan","3,00","Flaky, buttered white-flour bread.","Πίτα σφολιάτας με βούτυρο.",1],
+  ["Garlic Naan","3,50","Leavened bread with garlic and butter.","Πίτα με σκόρδο και βούτυρο.",1],
+  ["Keema Naan","4,50","Stuffed with lightly spiced minced lamb.","Πίτα γεμιστή με ελαφρώς πικάντικο κιμά αρνιού.",0],
+  ["Peshawari Naan","4,50","Stuffed with dried fruit.","Πίτα γεμιστή με αποξηραμένα φρούτα.",1],
+  ["Paneer Naan","4,50","Stuffed with homemade cheese.","Πίτα γεμιστή με σπιτικό τυρί.",1],
+  ["Mix Chilli Naan","4,50","Stuffed with onion, garlic, green chilli and cheese.","Πίτα γεμιστή με τυρί, κρεμμύδι, σκόρδο και πράσινο τσίλι.",1],
+  ["Aloo Paratha","4,50","Stuffed with delicately spiced potato.","Πίτα γεμιστή με πατάτες και ινδικά μπαχαρικά.",1],
+  ["Laccha Paratha","3,50","Butter-rich layered whole-wheat bread.","Πίτα σφολιάτας από ολικής αλέσεως με βούτυρο.",1],
+  ["Mint Paratha","3,50","Flaky bread with a touch of mint.","Πίτα σφολιάτας με άρωμα μέντας.",1],
+  ["Tandoori Roti","2,00","Whole-wheat bread baked in the tandoor.","Πίτα ολικής ψημένη στο ταντούρ.",1]]},
+ {id:"dessert", en:"Desserts & Lassi", el:"Επιδόρπια & Λάσι", items:[
+  ["Gulab Jamun (2 pcs)","4,00","Soft milk dumplings in thick sugar syrup.","Παραδοσιακό ινδικό γλυκό με βάση το γάλα, σε σιρόπι.",1],
+  ["Mango Kulfi","5,50","Indian ice cream with milk, mango, saffron, almonds and nuts.","Ινδικό παγωτό με γάλα, μάνγκο, σαφράν και αμύγδαλα.",1],
+  ["Ice Cream (2 scoops)","4,00","","Παγωτό (2 μπάλες).",1],
+  ["Mango Lassi","4,50","Cold mango and yoghurt drink.","Κρύο ρόφημα με μάνγκο και γιαούρτι.",1],
+  ["Lassi (sweet or salted)","4,00","Cold yoghurt drink, sweet or salted.","Κρύο ρόφημα γιαουρτιού, γλυκό ή αλμυρό.",1]]},
+ {id:"drinks", en:"Drinks", el:"Ποτά", groups:[
+  ["Soft drinks / Αναψυκτικά",[["Coca-Cola, Light, Zero · 330 ml","3,00"],["Fanta orange or lemon · 330 ml","3,00"],["Sprite · 330 ml","3,00"],["Soda · 330 ml","3,00"],["Water · 1.5 L","2,00"],["Water · 0.5 L","0,50"],["Fresh orange juice","3,50"]]],
+  ["Beer / Μπίρες",[["Cobra (Indian) · 660 ml / 330 ml","7,00 / 6,50"],["Kingfisher (Indian) · 330 ml","6,50"],["Corona · 355 ml","5,50"],["Heineken · 500 ml","5,50"],["Amstel · 500 ml","5,00"],["Fix (Greek) · 500 ml","5,00"],["Alfa (Greek) · 500 ml","5,00"]]],
+  ["Spirits / Ποτά",[["Whiskey, standard or special","7,00 / 10,00"],["Vodka, gin, rum or tequila","7,00"],["Baileys or Metaxa","7,00"],["Ouzo","3,00"]]],
+  ["White wine / Λευκά",[["House white, Ampelou Nektar · glass","3,00"],["Ktima Hatzimichalis · Sauvignon Blanc, Malagouzia","20,00"],["Ktima Gerovassiliou · Assyrtiko, Malagouzia","28,00"],["Biblia Chora · Sauvignon Blanc, Assyrtiko","25,00"],["Petrines Plagies Palivou · Chardonnay","22,00"],["Magiko Vouno Lazaridis · Sauvignon Blanc","32,00"]]],
+  ["Red wine / Κόκκινα",[["House red, Ampelou Nektar · glass","3,00"],["Ktima Hatzimichalis · Cabernet, Merlot","22,00"],["Ktima Gerovassiliou · Syrah, Limnio, Merlot","35,00"],["Biblia Chora · Merlot, Cabernet Sauvignon","45,00"],["Boutari Agiorgitiko","20,00"],["Magiko Vouno Lazaridis · Cabernet Franc, Cabernet Sauvignon","45,00"]]],
+  ["Rosé, sparkling & sweet",[["Ktima Hatzimichalis rosé · Syrah, Merlot, Grenache","22,00"],["Thema Pavlidis rosé · Tempranillo","22,00"],["Asti Martini (sweet)","30,00"],["Amalia Brut (dry)","27,00"],["Mavrodaphne","20,00"]]],
+  ["Coffee & tea / Καφές & τσάι",[["Espresso single / double","2,00"],["Filter coffee","2,00"],["Cappuccino single / double","2,50 / 3,00"],["Freddo cappuccino","3,50"],["Greek coffee single / double","2,00 / 2,50"],["Nescafé hot or frappé","2,50"],["Chocolate hot or cold","3,00"],["Tea hot or cold","2,50"],["Indian masala tea","3,00"]]]
+ ]}
+];
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let lang = (navigator.language||"").toLowerCase().startsWith("el") ? "el" : "en", active = MENU[0].id;
+try { const l = localStorage.getItem("ih-lang"); if (l === "el" || l === "en") lang = l; } catch(e){}
+const qp = new URLSearchParams(location.search).get("lang"); if (qp === "el" || qp === "en") lang = qp;
+const L = (en, el) => lang === "el" ? el : en;
+
+function renderTabs(){
+  $("#tabs").innerHTML = MENU.map(c =>
+    `<button role="tab" aria-selected="${c.id===active}" data-id="${c.id}">${esc(c[lang])}</button>`).join("");
+}
+function renderItems(){
+  const c = MENU.find(x => x.id === active);
+  let h = "";
+  if (c.groups){
+    c.groups.forEach(([g, rows]) => {
+      h += `<div class="group" style="grid-column:1/-1"><h3>${esc(g)}</h3></div>`;
+      rows.forEach(([n,p]) => h += `<div class="item"><div class="row"><span class="name">${esc(n)}</span><span class="dots"></span><span class="p">${esc(p)} €</span></div></div>`);
+    });
+  } else {
+    c.items.forEach(([n,p,en,el,v]) => {
+      const d = lang === "el" ? el : en;
+      h += `<div class="item"><div class="row"><span class="name">${esc(n)}${v?' <span class="veg" title="Vegetarian" aria-label="Vegetarian"></span>':''}</span><span class="dots"></span><span class="p">${esc(p)} €</span></div>${d?`<p class="d">${esc(d)}</p>`:""}</div>`;
+    });
+  }
+  $("#items").innerHTML = h;
+}
+function setLang(l){
+  lang = l;
+  try { localStorage.setItem("ih-lang", l); } catch(e){}
+  document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === l));
+  document.querySelectorAll("[data-en]").forEach(el => el.innerHTML = el.dataset[l]);
+  document.querySelectorAll("[data-ph-en]").forEach(el => el.placeholder = l === "el" ? el.dataset.phEl : el.dataset.phEn);
+  document.documentElement.lang = l === "el" ? "el" : "en-GB";
+  document.title = L("Indian Heritage | Authentic Indian Cuisine in Athens", "Indian Heritage | Αυθεντική ινδική κουζίνα στην Αθήνα");
+  $(".navbtn").setAttribute("aria-label", L("Open navigation","Άνοιγμα πλοήγησης"));
+  $("#wa").setAttribute("aria-label", L("Message us on WhatsApp","Στείλτε μας μήνυμα στο WhatsApp"));
+  $("#formmsg").textContent = "";
+  renderTabs(); renderItems(); renderDynamic();
+}
+$("#tabs").addEventListener("click", e => { const b = e.target.closest("button"); if(!b) return; active = b.dataset.id; renderTabs(); renderItems(); });
+document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+
+const ph = (url, label) => url ? `<img src="${esc(url)}" alt="${esc(label)}" loading="lazy">` : `<div class="blank">${esc(label)}</div>`;
+const tel = s => s.replace(/[^+\d]/g,"");
+function renderStatus(){
+  const now = new Date(new Date().toLocaleString("en-US",{timeZone:"Europe/Athens"}));
+  const mins = now.getHours()*60 + now.getMinutes();
+  const toM = t => { const [h,m] = t.split(":").map(Number); return h*60+m; };
+  const o = toM(CONFIG.statusOpen), c = toM(CONFIG.statusClose) || 1440;
+  const isOpen = c > o ? (mins >= o && mins < c) : (mins >= o || mins < c);
+  const el = $("#status"); el.classList.toggle("open", isOpen);
+  el.textContent = isOpen ? L(`Open now until ${CONFIG.statusClose}`, `Ανοιχτά τώρα έως ${CONFIG.statusClose}`)
+                          : L(`Opening at ${CONFIG.statusOpen}`, `Ανοίγουμε στις ${CONFIG.statusOpen}`);
+}
+function renderDynamic(){
+  renderStatus();
+  $("#dishes").innerHTML = CONFIG.signature.map(([n,den,del,p,img]) =>
+    `<article class="dish"><div class="ph">${ph(img,n)}<svg class="steam" viewBox="0 0 90 110" aria-hidden="true"><path d="M25 100 C15 80 35 70 25 50 C18 36 30 26 26 12"/><path d="M45 100 C35 80 55 70 45 50 C38 36 50 26 46 12"/><path d="M65 100 C55 80 75 70 65 50 C58 36 70 26 66 12"/></svg></div><h3>${esc(n)}</h3><p>${esc(L(den,del))}</p><div class="price">${esc(p)} €</div></article>`).join("");
+  $("#hours").innerHTML = CONFIG.hours.map(([den,del,t]) => `${esc(L(den,del))}<br>${esc(t)}`).join("<br>");
+  $("#delivery").innerHTML = CONFIG.delivery.map(([n,u]) => `<a class="btn solid" href="${esc(u)}" target="_blank" rel="noopener">${L("Order on","Παραγγελία στο")} ${esc(n)}</a>`).join("");
+  if (CONFIG.eventsImage) $("#eventsimg").innerHTML = `<img src="${esc(CONFIG.eventsImage)}" alt="Indian Heritage">`;
+  $("#galleryGrid").innerHTML = CONFIG.gallery.map((u,i) => `<div>${u?`<img src="${esc(u)}" alt="Indian Heritage ${i+1}" loading="lazy">`:L("Photo","Φωτογραφία")}</div>`).join("");
+  $("#addr").textContent = CONFIG.address;
+  $("#maplink").href = CONFIG.mapsUrl;
+  $("#contactlist").innerHTML =
+    `<dt>${L("Address","Διεύθυνση")}</dt><dd><a href="${CONFIG.mapsUrl}" target="_blank" rel="noopener">${esc(CONFIG.address)}</a></dd>
+     <dt>${L("Phone","Τηλέφωνο")}</dt><dd><a href="tel:${tel(CONFIG.phone)}">${esc(CONFIG.phone)}</a></dd>
+     <dt>${L("Mobile","Κινητό")}</dt><dd><a href="tel:${tel(CONFIG.mobile)}">${esc(CONFIG.mobile)}</a></dd>
+     <dt>Email</dt><dd><a href="mailto:${esc(CONFIG.email)}">${esc(CONFIG.email)}</a></dd>
+     <dt>${L("Hours","Ωράριο")}</dt><dd>${CONFIG.hours.map(([den,del,t])=>esc(L(den,del))+", "+esc(t)).join("<br>")}</dd>`;
+  $("#social").innerHTML = CONFIG.social.map(([n,u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(n)}</a>`).join("");
+}
+$("#yr").textContent = new Date().getFullYear();
+const waBase = "https://wa.me/" + CONFIG.whatsapp;
+$("#wa").href = waBase;
+$("#eventsbtn").href = waBase + "?text=" + encodeURIComponent("Hello, I would like to ask about an event at Indian Heritage. / Γεια σας, θα ήθελα πληροφορίες για εκδήλωση.");
+$("#eventsbtn").target = "_blank";
+
+// booking form -> WhatsApp message
+(function(){
+  const [fh,fm] = CONFIG.openFrom.split(":").map(Number), [th,tm] = CONFIG.openTo.split(":").map(Number);
+  let t = fh*60+fm, end = th*60+tm, opts = "";
+  for (; t <= end; t += 30){ const s = String(Math.floor(t/60)).padStart(2,"0")+":"+String(t%60).padStart(2,"0"); opts += `<option>${s}</option>`; }
+  $("#timesel").innerHTML = opts;
+  $("#guestsel").innerHTML = Array.from({length:10},(_,i)=>`<option>${i+1}</option>`).join("");
+  $("#guestsel").value = "2";
+  const d = $("input[name=date]"); const today = new Date().toISOString().slice(0,10); d.min = today; d.value = today;
+})();
+$("#bookform").addEventListener("submit", e => {
+  e.preventDefault();
+  const f = new FormData(e.target), msg = $("#formmsg");
+  if (!f.get("name").trim() || !f.get("phone").trim()){ msg.textContent = L("Add your name and phone number so we can confirm.","Συμπληρώστε όνομα και τηλέφωνο για να σας επιβεβαιώσουμε."); return; }
+  const text = `Table request - Indian Heritage\nName: ${f.get("name")}\nPhone: ${f.get("phone")}\nDate: ${f.get("date")} at ${f.get("time")}\nGuests: ${f.get("guests")}\nOccasion: ${f.get("occasion")}\nNotes: ${f.get("notes")||"-"}`;
+  window.open(waBase + "?text=" + encodeURIComponent(text), "_blank", "noopener");
+  msg.textContent = L("WhatsApp is opening with your request. Press send there to finish booking.","Ανοίγει το WhatsApp με το αίτημά σας. Πατήστε αποστολή εκεί για να ολοκληρωθεί η κράτηση.");
+});
+
+// mobile nav
+const nb = $(".navbtn"), nl = $("#navlist");
+nb.addEventListener("click", () => { const o = nl.classList.toggle("open"); nb.setAttribute("aria-expanded", o); });
+nl.addEventListener("click", e => { if (e.target.tagName === "A"){ nl.classList.remove("open"); nb.setAttribute("aria-expanded", false); } });
+
+setLang(lang);
+setInterval(renderStatus, 60000);
+
+/* ===== motion ===== */
+(function(){
+  // mandala: concentric rings of petals, built once
+  const m = $("#mandala"); if (m){
+    let g = '<g fill="none" stroke="currentColor" stroke-width=".6">';
+    [[12,22,16],[16,42,24],[24,64,30],[32,86,34]].forEach(([n,r,len],ring) => {
+      for (let i=0;i<n;i++){
+        const a = (i/n)*360 + (ring%2?180/n:0);
+        g += `<path transform="rotate(${a})" d="M0 ${-r+len} C${len*.35} ${-r+len*.5} ${len*.25} ${-r+len*.15} 0 ${-r} C${-len*.25} ${-r+len*.15} ${-len*.35} ${-r+len*.5} 0 ${-r+len}Z"/>`;
+      }
+      g += `<circle r="${r+2}" stroke-dasharray="1 3"/>`;
+    });
+    g += '<circle r="8"/><circle r="3" fill="currentColor"/></g>';
+    m.innerHTML = g;
+  }
+  // dividers draw in when scrolled into view
+  const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), {threshold:.6}) : null;
+  document.querySelectorAll(".divider").forEach(d => io ? io.observe(d) : d.classList.add("in"));
+
+  // tandoor embers rising through the hero
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const cv = $("#embers"), hero = $(".hero"), ctx = cv.getContext("2d");
+  let W, H, dpr, parts = [], running = true, visible = true;
+  function size(){ dpr = Math.min(devicePixelRatio||1, 2); W = hero.clientWidth; H = hero.clientHeight; cv.width = W*dpr; cv.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0); }
+  function spawn(init){ return { x: W*(.35+Math.random()*.7), y: init ? Math.random()*H : H+10, r: .8+Math.random()*2.2, vy: .25+Math.random()*.6, vx: (Math.random()-.5)*.2, ph: Math.random()*6.28, life: 0, max: 240+Math.random()*320, hue: 28+Math.random()*18 }; }
+  size(); const N = W < 600 ? 26 : 48; for (let i=0;i<N;i++) parts.push(spawn(true));
+  addEventListener("resize", size);
+  document.addEventListener("visibilitychange", () => { running = !document.hidden; if (running && visible) requestAnimationFrame(tick); });
+  new IntersectionObserver(es => { visible = es[0].isIntersecting; if (visible && running) requestAnimationFrame(tick); }).observe(hero);
+  function tick(){
+    if (!running || !visible) return;
+    ctx.clearRect(0,0,W,H);
+    for (const p of parts){
+      p.life++; p.ph += .02; p.y -= p.vy; p.x += p.vx + Math.sin(p.ph)*.25;
+      const t = p.life/p.max, a = Math.sin(Math.min(t,1)*Math.PI)*.85;
+      const grd = ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*4);
+      grd.addColorStop(0, `hsla(${p.hue},95%,70%,${a})`); grd.addColorStop(1, `hsla(${p.hue},95%,50%,0)`);
+      ctx.fillStyle = grd; ctx.beginPath(); ctx.arc(p.x,p.y,p.r*4,0,6.283); ctx.fill();
+      if (p.life > p.max || p.y < -10) Object.assign(p, spawn(false));
+    }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
